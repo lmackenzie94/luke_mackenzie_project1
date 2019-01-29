@@ -1,0 +1,627 @@
+/* SETUP STYLES */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+.skip-link {position: absolute; left: -1000px; top: 5px; z-index: 999; background: white; color: black;}
+.skip-link:focus {left: 0;}
+
+/* BASE STYLES */
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1rem;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 6.5rem;
+    color: #f2a11c;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #f2a11c;
+    /* font-weight: 600 ?? */
+}
+
+h4 {
+    font-family: 'Pacifico', cursive;
+    color: #f2a11c;
+    font-size: 1.25rem;
+    margin: 2% 0;
+}
+
+.button {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+    color: #f2a11c;
+    line-height: 1.45rem;
+    text-align: center;
+    background: #222;
+    border: 2px solid #222;
+    padding: 7px 25px;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+.button:hover {
+    background: #f4f4f4;
+    border: 2px solid #222;
+}
+
+p {
+    color: #1f2022;
+    line-height: 1.45rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    line-height: 1.45rem;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* HEADER STYLES */
+
+header {
+    min-height: 100vh;
+    background: url(assets/headerImage.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 10px;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headerNav {
+    text-align: center;
+}
+
+.mainNav {
+    text-align: center;
+    display: inline-block;
+}
+
+.mainNav li {
+    display: inline-block;
+}
+
+.mainNav a {
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color .2s linear;
+    font-weight: 600;
+}
+
+.mainNav a:hover {
+    color: #f2a11c;
+}
+
+.headerSocial {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.headerSocial li {
+    text-align: center;
+}
+
+header i {
+    color: #f2a11c;
+    transition: all .2s linear;
+}
+
+header i:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+/* HAMBURGER STYLES */
+
+.hamburger {
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  float: right;
+  margin-top: 5px;
+  display: none;
+}
+
+.line1,
+.line2,
+.line3 {
+    background: #fff;
+    height: 3px;
+    width: 50px;
+    position: relative;
+    margin-bottom: 10px;
+    transition: all .5s ease;
+    border-radius: 3px;
+  }
+
+/* HAMBURGER - ACTIVE STYLES */
+
+ .line1.active {
+    background: #fff;
+    height: 3px;
+    width: 50px;
+    transform: rotate(45deg);
+    transform-origin: 10%;
+    border-radius: 3px;
+  }
+
+.line2.active {
+    visibility: hidden;
+    transition: 0s;
+  }
+
+.line3.active {
+    background: #fff;
+    height: 3px;
+    width: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 10%;
+    top: 4%;
+    border-radius: 3px;
+  }
+
+/* MAIN SECTION STYLES */
+
+.missionSection-image,
+.aboutSection-image,
+.aboutSection-text,
+.missionSection-text {
+    width: 50%;
+}
+
+.aboutSection-image {
+    float: right;
+    background-image: url(assets/aboutSection.png);
+    background-position: center -1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+    /* had issues making the background shorthand work */
+}
+
+.aboutSection-text {
+    padding: 7% 5% 0% 8%;
+    float: left;
+    max-width: 45%;
+}
+
+.missionSection-image {
+    float: left;
+    background-image: url(assets/missionSection.png);
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+}
+
+.missionSection-text {
+    padding: 7% 8% 0% 5%;
+    float: right;
+    max-width: 45%;
+}
+
+main p {
+    margin-top:0;
+}
+
+/* MEET ALISSA STYLES */
+
+article {
+    background-color: #f4f4f4;
+}
+
+.meetAlissa {
+    padding: 5% 0;
+}
+
+.meetAlissa-text,
+.meetAlissa-image {
+    float: left;
+}
+
+.meetAlissa-image {
+    width: 30%;
+    padding-top: 3%;
+}
+
+.meetAlissa-text {
+    width: 70%;
+    padding-left: 5%;
+}
+
+.meetAlissa-text p {
+    margin-top: 0;
+}
+
+/* ICONS SECTION STYLES */
+
+.icons {
+    background: url(assets/iconsImage.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+    /* couldn't find the mobile version of the image */
+}
+
+.iconContainer {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 150px 0;
+}
+
+.iconBox {
+    float: left;
+    text-align: center;
+}
+
+.iconBox:nth-of-type(2) {
+    padding: 0 110px;
+}
+
+.iconBox i {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* THE GRAM STYLES */
+
+.theGram {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery {
+    margin-top: 40px;
+}
+
+.galleryImage {
+    width: calc((100% / 3) - (4% / 3));
+    float: left;
+}
+
+.galleryImage:nth-child(3) {
+    margin: 0 2%;
+}
+
+.galleryImage-mobile {
+    display: none;
+}
+
+/* FOOTER STYLES */
+
+footer {
+    background-color: #222;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer {
+    padding: 50px 0;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footerNav ul {
+    text-align: center;
+}
+
+.footerNav li {
+    display: inline-block;
+}
+
+.footerNav a {
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color .2s linear;
+    font-weight: 600;
+}
+
+.footerNav a:hover {
+    color: #f2a11c;
+}
+
+.copyright {
+    text-align: center;
+    background: #000;
+    clear: both;
+    padding: 10px 0;
+}
+
+.copyright p {
+    color: #fcfcfc;
+    opacity: 0.5;
+}
+
+.footerContact,
+.footerForm {
+    width: 50%;
+    float: left;
+    margin: 25px 0 75px 0;
+}
+
+.footerForm form {
+    margin-top: 7px;
+}
+
+.footerForm button {
+    background-color: #f2a11c;
+    color: #1f2022;
+    width: 35%;
+    padding: 10px 0;
+    transition: all .2s linear;
+    border: none;
+    float: left;
+    display: block;
+    line-height: 1.45rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footerForm button:hover {
+    background-color: #bf7a0b
+}
+
+.footerForm input[type=email] {
+    border: none;
+    padding: 10px 0 10px 25px;
+    font-size: .9rem;
+    width: 65%;
+    float: left;
+    display: block;
+    line-height: 1.45rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1080px) {
+
+    body {
+        font-size: .9rem;
+    }
+
+    .meetAlissa-image {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    .meetAlissa-image,
+    .meetAlissa-text {
+        float: none;
+        text-align: center;
+    }
+
+    .meetAlissa-text {
+        width: 100%;
+    }
+
+    .meetAlissa-image {
+        max-width: 100%;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    .meetAlissa-text {
+        padding: 3% 0 5% 0;
+    }
+
+    .meetAlissa-text p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .missionSection-image,
+    .missionSection-text,
+    .aboutSection-image,
+    .aboutSection-text {
+        width: 100%;
+        float: none;
+    }
+
+    .aboutSection-text,
+    .missionSection-text {
+        text-align: center;
+        padding: 5% 4% 10% 4%;
+        max-width: 100%;
+    }
+
+    .aboutSection-image,
+    .missionSection-image {
+        height: 40vh;
+    }
+
+    h1 {
+        font-size: 3.75rem;
+    }
+
+    .footerContact,
+    .footerForm {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    .footer h4 {
+        margin: 0;
+    }
+
+    .iconBox:nth-of-type(2) {
+        padding: 0 40px;
+    }
+
+    header {
+        background: url(assets/headerImage-tablet.png) no-repeat;
+    }
+}
+
+@media (max-width: 535px) {
+
+    .headerSocial {
+        display: none;
+    }
+
+    .mainNav {
+        position: absolute;
+        top: -200px;
+        left: 40%;
+        transition: all .4s linear;
+    }
+
+    .mainNav.active {
+        top: 10px;
+    }
+
+    .mainNav li {
+        display: block;
+    }
+
+    .mainNav a {
+        padding: 10px 3px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .footer {
+        padding: 25px 0 0 0;
+    }
+
+    .footerForm button,
+    .footerForm input[type=email] {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerForm input[type="email"] {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .theGram {
+        padding: 20px 0 40px 0
+    }
+
+    .galleryImage {
+        display: none;
+    }
+
+    .galleryImage-mobile {
+        display: block;
+    }
+
+    .galleryImage-mobile:nth-child(4) {
+        margin: 0 0 0 4%;
+    }
+
+    .galleryImage-mobile {
+        float: left;
+        width: calc((100% / 2) - 2%);
+    }
+
+    .icons {
+        background-position-x: -950px;
+    }
+
+    .iconBox {
+        float: none;
+        padding: 30px 0;
+    }
+
+    .iconContainer {
+        padding: 50px 0;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    header {
+        background: url(assets/headerImage-mobile.png) no-repeat;
+        background-size: cover;
+    }
+
+    .meetAlissa-image {
+        width: 100%;
+    }
+
+    .aboutSection-image {
+        background: url(assets/aboutSection-mobile.png);
+        max-height: 204px;
+    }
+
+    .missionSection-image {
+        background: url(assets/missionSection-mobile.png);
+        max-height: 204px;
+    }
+
+    .footerNav a {
+        padding: 0 13px;
+        text-transform: capitalize;
+    }
+}
+
