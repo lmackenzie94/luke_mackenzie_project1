@@ -4,8 +4,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
-.skip-link {position: absolute; left: -1000px; top: 5px; z-index: 999; background: white; color: black;}
-.skip-link:focus {left: 0;}
+.skipLink {position: absolute; left: -1000px; top: 5px; z-index: 999; background: white; color: black;}
+.skipLink:focus {left: 0;}
 
 /* BASE STYLES */
 
@@ -211,14 +211,14 @@ header i:hover {
 
 /* MAIN SECTION STYLES */
 
-.missionSection-image,
-.aboutSection-image,
-.aboutSection-text,
-.missionSection-text {
+.missionSectionImage,
+.aboutSectionImage,
+.aboutSectionText,
+.missionSectionText {
     width: 50%;
 }
 
-.aboutSection-image {
+.aboutSectionImage {
     float: right;
     background-image: url(assets/aboutSection.png);
     background-position: center -1px;
@@ -228,13 +228,13 @@ header i:hover {
     /* had issues making the background shorthand work */
 }
 
-.aboutSection-text {
+.aboutSectionText {
     padding: 7% 5% 0% 8%;
     float: left;
     max-width: 45%;
 }
 
-.missionSection-image {
+.missionSectionImage {
     float: left;
     background-image: url(assets/missionSection.png);
     background-position: center;
@@ -242,7 +242,7 @@ header i:hover {
     height: 75vh;
 }
 
-.missionSection-text {
+.missionSectionText {
     padding: 7% 8% 0% 5%;
     float: right;
     max-width: 45%;
@@ -262,22 +262,22 @@ article {
     padding: 5% 0;
 }
 
-.meetAlissa-text,
-.meetAlissa-image {
+.meetAlissaText,
+.meetAlissaImage {
     float: left;
 }
 
-.meetAlissa-image {
+.meetAlissaImage {
     width: 30%;
     padding-top: 3%;
 }
 
-.meetAlissa-text {
+.meetAlissaText {
     width: 70%;
     padding-left: 5%;
 }
 
-.meetAlissa-text p {
+.meetAlissaText p {
     margin-top: 0;
 }
 
@@ -330,7 +330,7 @@ article {
     margin: 0 2%;
 }
 
-.galleryImage-mobile {
+.galleryImageMobile {
     display: none;
 }
 
@@ -434,7 +434,7 @@ footer p {
         font-size: .9rem;
     }
 
-    .meetAlissa-image {
+    .meetAlissaImage {
         margin-top: 20px;
     }
 }
@@ -445,51 +445,51 @@ footer p {
         font-size: 5rem;
     }
 
-    .meetAlissa-image,
-    .meetAlissa-text {
+    .meetAlissaImage,
+    .meetAlissaText {
         float: none;
         text-align: center;
     }
 
-    .meetAlissa-text {
+    .meetAlissaText {
         width: 100%;
     }
 
-    .meetAlissa-image {
+    .meetAlissaImage {
         max-width: 100%;
         width: 50%;
         margin: 0 auto;
         padding-top: 0;
     }
 
-    .meetAlissa-text {
+    .meetAlissaText {
         padding: 3% 0 5% 0;
     }
 
-    .meetAlissa-text p {
+    .meetAlissaText p {
         text-align: left;
     }
 }
 
 @media (max-width: 757px) {
 
-    .missionSection-image,
-    .missionSection-text,
-    .aboutSection-image,
-    .aboutSection-text {
+    .missionSectionImage,
+    .missionSectionText,
+    .aboutSectionImage,
+    .aboutSectionText {
         width: 100%;
         float: none;
     }
 
-    .aboutSection-text,
-    .missionSection-text {
+    .aboutSectionText,
+    .missionSectionText {
         text-align: center;
         padding: 5% 4% 10% 4%;
         max-width: 100%;
     }
 
-    .aboutSection-image,
-    .missionSection-image {
+    .aboutSectionImage,
+    .missionSectionImage {
         height: 40vh;
     }
 
@@ -514,7 +514,7 @@ footer p {
     }
 
     header {
-        background: url(assets/headerImage-tablet.png) no-repeat;
+        background: url(assets/headerImageTablet.png) no-repeat;
     }
 }
 
@@ -570,15 +570,15 @@ footer p {
         display: none;
     }
 
-    .galleryImage-mobile {
+    .galleryImageMobile {
         display: block;
     }
 
-    .galleryImage-mobile:nth-child(4) {
+    .galleryImageMobile:nth-child(4) {
         margin: 0 0 0 4%;
     }
 
-    .galleryImage-mobile {
+    .galleryImageMobile {
         float: left;
         width: calc((100% / 2) - 2%);
     }
@@ -595,27 +595,26 @@ footer p {
     .iconContainer {
         padding: 50px 0;
     }
-
 }
 
 @media (max-width: 400px) {
 
     header {
-        background: url(assets/headerImage-mobile.png) no-repeat;
+        background: url(assets/headerImageMobile.png) no-repeat;
         background-size: cover;
     }
 
-    .meetAlissa-image {
+    .meetAlissaImage {
         width: 100%;
     }
 
-    .aboutSection-image {
-        background: url(assets/aboutSection-mobile.png);
+    .aboutSectionImage {
+        background: url(assets/aboutSectionMobile.png);
         max-height: 204px;
     }
 
-    .missionSection-image {
-        background: url(assets/missionSection-mobile.png);
+    .missionSectionImage {
+        background: url(assets/missionSectionMobile.png);
         max-height: 204px;
     }
 
