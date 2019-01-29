@@ -430,10 +430,6 @@ footer p {
 
 @media (max-width: 1080px) {
 
-    body {
-        font-size: .9rem;
-    }
-
     .meetAlissaImage {
         margin-top: 20px;
     }
@@ -443,6 +439,14 @@ footer p {
 
     h1 {
         font-size: 5rem;
+    }
+
+    .missionSectionText {
+        padding: 4% 8% 0% 5%;
+    }
+    
+    .aboutSectionText {
+        padding: 4% 5% 0% 8%;
     }
 
     .meetAlissaImage,
