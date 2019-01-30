@@ -429,13 +429,6 @@ footer p {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1080px) {
-
-    .meetAlissaImage {
-        margin-top: 20px;
-    }
-}
-
 @media (max-width: 900px) {
 
     h1 {
