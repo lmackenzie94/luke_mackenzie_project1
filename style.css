@@ -384,6 +384,7 @@ footer p {
 .copyright p {
     color: #fcfcfc;
     opacity: 0.5;
+    font-size: .9rem;
 }
 
 .footerContact,
